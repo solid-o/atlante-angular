@@ -7,8 +7,8 @@
     "build": "ng-packagr -c tsconfig.json -p package.json",
     "coverage": "nyc npm test",
     "coverage-html": "nyc --reporter=html npm test",
-    "lint": "eslint lib/ integrations/",
-    "lint-fix": "eslint --fix lib/ integrations/",
+    "lint": "eslint lib/",
+    "lint-fix": "eslint --fix lib/",
     "test": "node ./tests.js"
   },
   "repository": {
@@ -38,7 +38,10 @@
     "@jymfony/testing": "^0.1.0-alpha.28",
     "@jymfony/var-dumper": "^0.1.0-alpha.28",
     "@solido/atlante-js": "^0.3",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
     "chai": "^4.2.0",
+    "eslint": "^7.14.0",
     "mocha": "^6.2.3",
     "ng-packagr": "^11",
     "nyc": "^14.1",

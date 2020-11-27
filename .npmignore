@@ -1,0 +1,12 @@
+node_modules/
+.travis.yml
+.gitignore
+.eslintrc.json
+.idea
+
+package-lock.json
+*.ts
+!*.d.ts
+test/
+tests.js
+.github/

@@ -1,0 +1,60 @@
+{
+  "name": "@solido/atlante-angular",
+  "version": "0.2.99",
+  "description": "Angular module for solido/atlante",
+  "main": "index.ts",
+  "scripts": {
+    "build": "ng-packagr -c tsconfig.json -p package.json",
+    "coverage": "nyc npm test",
+    "coverage-html": "nyc --reporter=html npm test",
+    "lint": "eslint lib/ integrations/",
+    "lint-fix": "eslint --fix lib/ integrations/",
+    "test": "node ./tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/solid-o/atlante-angular.git"
+  },
+  "author": "Alessandro Chitolina <alekitto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solid-o/atlante-angular/issues"
+  },
+  "homepage": "https://github.com/solid-o/atlante-angular#readme",
+  "peerDependencies": {
+    "@solido/atlante-js": "^0.3"
+  },
+  "devDependencies": {
+    "@angular/common": "^11",
+    "@angular/compiler": "^11",
+    "@angular/compiler-cli": "^11",
+    "@angular/core": "^11",
+    "@jymfony/autoloader": "^0.1.0-alpha.28",
+    "@jymfony/compiler": "^0.2.12",
+    "@jymfony/contracts": "^0.1.0-alpha.28",
+    "@jymfony/datetime": "^0.1.0-alpha.28",
+    "@jymfony/debug": "^0.1.0-alpha.28",
+    "@jymfony/decorators": "^0.1.0-alpha.28",
+    "@jymfony/testing": "^0.1.0-alpha.28",
+    "@jymfony/var-dumper": "^0.1.0-alpha.28",
+    "@solido/atlante-js": "^0.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.3",
+    "ng-packagr": "^11",
+    "rxjs": "^6.6",
+    "typescript": "4.0.5"
+  },
+  "config": {
+    "jymfony-autoload": {},
+    "jymfony-autoload-dev": {
+      "namespaces": {
+        "Solido.Atlante.Tests": "test/"
+      }
+    }
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "index.ts"
+    }
+  }
+}

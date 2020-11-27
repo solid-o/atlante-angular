@@ -22,8 +22,8 @@ jobs:
       env:
         CI: true
     - run: npm run build
-    - run: cd dist
+    - run: rm -rf dist/{esm2015,fesm2015,bundles}/node_modules
     - run: echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
-    - run: npm publish --access public
+    - run: npm publish dist --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

@@ -14,8 +14,8 @@ import { ResponseFactoryInterface } from '@solido/atlante-js/lib/Requester/Respo
     providers: [
         Requester,
         ResponseFactory,
-        { provide: RequesterInterface, useFactory: forwardRef(() => Requester) },
-        { provide: ResponseFactoryInterface, useFactory: forwardRef(() => ResponseFactory) },
+        { provide: RequesterInterface, useExisting: forwardRef(() => Requester) },
+        { provide: ResponseFactoryInterface, useExisting: forwardRef(() => ResponseFactory) },
     ],
 })
 export class AtlanteModule {

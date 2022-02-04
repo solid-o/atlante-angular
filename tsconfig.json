@@ -1,4 +1,8 @@
 {
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "compilationMode": "partial"
+  },
   "compilerOptions": {
     "baseUrl": ".",
     "experimentalDecorators": true,

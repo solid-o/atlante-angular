@@ -59,7 +59,7 @@ yarn.lock
 # next.js build output
 .next
 
+.angular/
 var/
-package-lock.json
 *.d.ts
 dist/

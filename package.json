@@ -4,7 +4,7 @@
   "description": "Angular module for solido/atlante",
   "main": "index.ts",
   "scripts": {
-    "build": "ng-packagr -c tsconfig.json -p package.json",
+    "build": "ng build",
     "coverage": "nyc npm test",
     "coverage-html": "nyc --reporter=html npm test",
     "lint": "eslint lib/",
@@ -22,43 +22,40 @@
   },
   "homepage": "https://github.com/solid-o/atlante-angular#readme",
   "peerDependencies": {
-    "@solido/atlante-js": "^0.3"
+    "@solido/atlante-js": "^0.3 || ^0.4"
   },
   "devDependencies": {
-    "@angular/common": "^11",
-    "@angular/compiler": "^11",
-    "@angular/compiler-cli": "^11",
-    "@angular/core": "^11",
-    "@jymfony/autoloader": "^0.1.0-alpha.28",
-    "@jymfony/compiler": "^0.2.12",
-    "@jymfony/contracts": "^0.1.0-alpha.28",
-    "@jymfony/datetime": "^0.1.0-alpha.28",
-    "@jymfony/debug": "^0.1.0-alpha.28",
-    "@jymfony/decorators": "^0.1.0-alpha.28",
-    "@jymfony/testing": "^0.1.0-alpha.28",
-    "@jymfony/var-dumper": "^0.1.0-alpha.28",
-    "@solido/atlante-js": "^0.3",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "@typescript-eslint/parser": "^4.8.2",
-    "chai": "^4.2.0",
-    "eslint": "^7.14.0",
-    "mocha": "^6.2.3",
-    "ng-packagr": "^11",
-    "nyc": "^14.1",
-    "rxjs": "^6.6",
-    "typescript": "4.0.5"
+    "@angular-devkit/build-angular": "^13",
+    "@angular/cli": "^13.2.2",
+    "@angular/common": "^13",
+    "@angular/compiler": "^13",
+    "@angular/compiler-cli": "^13",
+    "@angular/core": "^13",
+    "@jymfony/autoloader": "https://github.com/jymfony/autoloader.git",
+    "@jymfony/contracts": "git+https://github.com/jymfony/contracts.git",
+    "@jymfony/datetime": "https://github.com/jymfony/date-time.git",
+    "@jymfony/debug": "https://github.com/jymfony/debug.git",
+    "@jymfony/decorators": "https://github.com/jymfony/decorators.git",
+    "@jymfony/testing": "https://github.com/jymfony/testing.git",
+    "@jymfony/var-dumper": "https://github.com/jymfony/var-dumper.git",
+    "@solido/atlante-js": "next",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "chai": "^4.3.6",
+    "eslint": "^8.8.0",
+    "mocha": "^9.2.0",
+    "ng-packagr": "^13.2",
+    "nyc": "^15.1",
+    "rxjs": "^7.5",
+    "typescript": "4.5.5"
   },
   "config": {
     "jymfony-autoload": {},
     "jymfony-autoload-dev": {
       "namespaces": {
+        "Solido.Atlante.Angular": "lib/",
         "Solido.Atlante.Tests": "test/"
       }
-    }
-  },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "index.ts"
     }
   }
 }

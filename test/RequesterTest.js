@@ -1,8 +1,9 @@
+import '@angular/compiler';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Requester } from "../lib/requester";
-import { ResponseFactory } from "../lib/response-factory";
+import { Requester } from '../lib/impl/requester-impl';
+import { ResponseFactory } from '../lib/impl/response-factory-impl';
 import { Subject } from 'rxjs';
-import { createRequest } from "@solido/atlante-js/lib/Requester/Request";
+import { createRequest } from '@solido/atlante-js/lib/Requester/Request';
 import { expect } from 'chai';
 
 const Argument = Jymfony.Component.Testing.Argument.Argument;

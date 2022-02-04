@@ -1,5 +1,6 @@
+import '@angular/compiler';
 import { HttpHeaders } from '@angular/common/http';
-import { ResponseFactory } from '../lib/response-factory';
+import { ResponseFactory } from '../lib/impl/response-factory-impl';
 import { @dataProvider } from '@jymfony/decorators';
 import { expect } from 'chai';
 

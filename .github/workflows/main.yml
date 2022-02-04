@@ -15,14 +15,14 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-    - run: npm install
+        node-version: '14.x'
+    - run: npm ci
     - run: touch node_modules/@jymfony/decorators/index.d.ts # Bug: "error TS2688: Cannot find type definition file for 'decorators'."
     - run: npm test
       env:
         CI: true
     - run: npm run build
-    - run: rm -rf dist/{esm2015,fesm2015,bundles}/node_modules
+    - run: rm -rf dist/{fesm2015,esm2020,fesm2020}/node_modules
     - run: echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
     - run: npm publish dist --access public
       env:
